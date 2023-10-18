@@ -1,0 +1,74 @@
+:root {
+  --color-design: rgb(119, 70, 255);
+  --color-white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; //normalizzato font size
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.5rem;
+}
+.hero {
+  background: var(--color-design);
+  color: var(--color-white);
+  text-align: center;
+  padding-block-start: 6rem;
+  padding-block-end: 8rem;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.mb {
+  margin-bottom: 5rem;
+}
+
+.mb-small {
+  margin-bottom: 2rem;
+}
+
+main {
+  margin-inline: 2rem; //ho racchiuso componenti dentro main e ho dato margine. opp potevo dare max width es 80% e margin auto a .steps per centrarli e dare margine
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  > div {
+    //lavoro su elementi interni
+    border: 1px solid var(--color-design);
+    border-radius: 0.6rem;
+    padding: 2rem;
+    color: var(--color-design);
+    transition: all 0.2s;
+    &:hover {
+      background: var(--color-design);
+      color: var(--color-white);
+      transform: scale(1.1); //x effetto ingrandimento
+    }
+    > h3 {
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.titolo {
+  text-align: center;
+}
+
+.argomento {
+  padding: 1.5rem;
+  background: rgb(230, 230, 230);
+  border-bottom: 1px dotted rgb(120, 120, 120);
+  margin-bottom: 1rem;
+}
